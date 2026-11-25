@@ -46,6 +46,23 @@ body {
   outline-offset: 3px;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 40;
+  padding: 0.6rem 1rem;
+  background: var(--band);
+  color: var(--band-ink);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
 a {
   color: inherit;
 }
@@ -145,8 +162,8 @@ body::after {
 }
 
 .nav-cta:hover {
-  background: var(--open);
-  color: var(--paper);
+  background: #2a261f;
+  color: var(--band);
 }
 
 .hero {

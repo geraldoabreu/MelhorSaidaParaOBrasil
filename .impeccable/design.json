@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T18:22:00.000Z",
+  "title": "Design System: Melhor Saída para o Brasil",
+  "extensions": {
+    "colorMeta": {
+      "band": {
+        "role": "primary",
+        "displayName": "Terminal Yellow",
+        "canonical": "#f5c400",
+        "tonalRamp": [
+          "#3a2e00",
+          "#5c4900",
+          "#7a6200",
+          "#a88800",
+          "#c9a800",
+          "#f5c400",
+          "#f7d45c",
+          "#fbe9a8"
+        ]
+      },
+      "band-ink": {
+        "role": "primary",
+        "displayName": "Band Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#111111",
+          "#2a2a2a",
+          "#444444",
+          "#5e5e5e",
+          "#787878",
+          "#9a9a9a",
+          "#c4c4c4",
+          "#ececec"
+        ]
+      },
+      "open": {
+        "role": "secondary",
+        "displayName": "Open Wine",
+        "canonical": "#9b1c2e",
+        "tonalRamp": [
+          "#2a080c",
+          "#4a0d16",
+          "#6b1420",
+          "#9b1c2e",
+          "#b83d4c",
+          "#d06a76",
+          "#e4a3ab",
+          "#f4d6da"
+        ]
+      },
+      "dawn-high": {
+        "role": "neutral",
+        "displayName": "Dawn High",
+        "canonical": "#8eb4c8",
+        "tonalRamp": [
+          "#1e3340",
+          "#345263",
+          "#4c7188",
+          "#6a94ab",
+          "#8eb4c8",
+          "#a9c9d8",
+          "#c7dee8",
+          "#e6f1f6"
+        ]
+      },
+      "dawn-mid": {
+        "role": "neutral",
+        "displayName": "Dawn Mid",
+        "canonical": "#e7b07a",
+        "tonalRamp": [
+          "#3d2614",
+          "#6a4222",
+          "#966033",
+          "#c4844e",
+          "#e7b07a",
+          "#efc59a",
+          "#f6dcc0",
+          "#fbf1e6"
+        ]
+      },
+      "dawn-low": {
+        "role": "neutral",
+        "displayName": "Dawn Low",
+        "canonical": "#c45c3a",
+        "tonalRamp": [
+          "#35140c",
+          "#5c2416",
+          "#8a3620",
+          "#c45c3a",
+          "#d47d5f",
+          "#e4a48e",
+          "#f0c9bc",
+          "#f8e8e2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14110c",
+        "tonalRamp": [
+          "#14110c",
+          "#2a261f",
+          "#4a4034",
+          "#6e6456",
+          "#94887a",
+          "#c4b896",
+          "#e7dcc8",
+          "#f4ead6"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f4ead6",
+        "tonalRamp": [
+          "#3a3428",
+          "#5c5344",
+          "#7d7362",
+          "#a39682",
+          "#c4b896",
+          "#ddd2bb",
+          "#f4ead6",
+          "#fbf7ee"
+        ]
+      },
+      "metal": {
+        "role": "neutral",
+        "displayName": "Metal",
+        "canonical": "#c4b896",
+        "tonalRamp": [
+          "#2a261f",
+          "#4a4438",
+          "#6c6454",
+          "#8f866f",
+          "#c4b896",
+          "#d4cbb3",
+          "#e6dfd0",
+          "#f4f0e6"
+        ]
+      },
+      "metal-dark": {
+        "role": "neutral",
+        "displayName": "Metal Dark",
+        "canonical": "#2a261f",
+        "tonalRamp": [
+          "#14110c",
+          "#2a261f",
+          "#3f3a31",
+          "#585248",
+          "#746c60",
+          "#9a907e",
+          "#c4b896",
+          "#e8e1d2"
+        ]
+      },
+      "note-ink": {
+        "role": "neutral",
+        "displayName": "Note Ink",
+        "canonical": "#4a4034",
+        "tonalRamp": [
+          "#1a1612",
+          "#2e281f",
+          "#4a4034",
+          "#6a5d4d",
+          "#8c7d69",
+          "#b0a08a",
+          "#d4c8b4",
+          "#f0e8dc"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#111111",
+          "#2a2a2a",
+          "#444444",
+          "#5e5e5e",
+          "#787878",
+          "#9a9a9a",
+          "#c4c4c4",
+          "#ececec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only: cream condensed type on dawn, max 14ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in Barlow Condensed, max 16ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product listing titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading copy in Overpass; section measure 68ch."
+      },
+      "label": {
+        "displayName": "Board Label",
+        "purpose": "Uppercase condensed destination rows and board grammar."
+      }
+    },
+    "shadows": [
+      {
+        "name": "band-umbra",
+        "value": "0 18px 40px rgb(20 17 12 / 0.22)",
+        "purpose": "Sticky yellow decision band."
+      },
+      {
+        "name": "board-umbra",
+        "value": "0 28px 60px rgb(20 17 12 / 0.35)",
+        "purpose": "Destination board chassis."
+      },
+      {
+        "name": "buy-lift",
+        "value": "0 10px 18px rgb(20 17 12 / 0.16)",
+        "purpose": "Primary buy slab at rest."
+      },
+      {
+        "name": "cover-lift",
+        "value": "8px 16px 28px rgb(20 17 12 / 0.2)",
+        "purpose": "Ebook cover only; not a general offset language."
+      },
+      {
+        "name": "headline-dusk",
+        "value": "0 10px 30px rgb(20 17 12 / 0.35)",
+        "purpose": "Display text-shadow on the dawn photograph."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Board row hover and split-flap verb."
+      },
+      {
+        "name": "row-hover",
+        "value": "220ms",
+        "purpose": "Background transition on live board rows."
+      },
+      {
+        "name": "flap",
+        "value": "5.6s",
+        "purpose": "Split-flap cycle on a single inline verb; disabled when prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "820px",
+        "purpose": "Band, split, product, and board collapse to one column; board headers hide."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Buy",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Yellow route slab for conversion and in-page hops.",
+      "html": "<a class=\"ds-buy\" href=\"#\">Quero este guia</a>",
+      "css": ".ds-buy { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.2rem; background: var(--band, #f5c400); color: var(--band-ink, #111111); font-family: \"Overpass Variable\", Overpass, system-ui, sans-serif; font-weight: 750; text-decoration: none; border-radius: 0; box-shadow: 0 10px 18px rgb(20 17 12 / 0.16); } .ds-buy:hover { background: var(--ink, #14110c); color: var(--band, #f5c400); } .ds-buy:focus-visible { outline: 3px solid var(--focus, #111111); outline-offset: 3px; } .ds-buy[aria-disabled=\"true\"] { opacity: 0.55; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Cell in the yellow decision band.",
+      "html": "<a class=\"ds-nav-link\" href=\"/\">Início</a>",
+      "css": ".ds-nav-link { display: flex; align-items: center; padding: 0 1.15rem; min-height: 4.25rem; background: var(--band, #f5c400); color: var(--band-ink, #111111); font-family: \"Overpass Variable\", Overpass, system-ui, sans-serif; font-weight: 650; text-decoration: none; border: 0; border-left: 2px solid var(--band-ink, #111111); border-radius: 0; } .ds-nav-link:hover { background: rgb(17 17 17 / 0.08); } .ds-nav-link:focus-visible { outline: 3px solid var(--focus, #111111); outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Inverted band cell that routes to the guides.",
+      "html": "<a class=\"ds-nav-cta\" href=\"/paraguai#guias\">Os guias</a>",
+      "css": ".ds-nav-cta { display: flex; align-items: center; padding: 0 1.15rem; min-height: 4.25rem; background: var(--band-ink, #111111); color: var(--band, #f5c400); font-family: \"Overpass Variable\", Overpass, system-ui, sans-serif; font-weight: 650; text-decoration: none; border-radius: 0; } .ds-nav-cta:hover { background: var(--open, #9b1c2e); color: var(--paper, #f4ead6); } .ds-nav-cta:focus-visible { outline: 3px solid var(--focus, #111111); outline-offset: 3px; }"
+    },
+    {
+      "name": "Board Row",
+      "kind": "custom",
+      "refersTo": "board-row",
+      "description": "Live destination row on the metal board.",
+      "html": "<a class=\"ds-row\" href=\"/paraguai\"><span>Paraguai</span><span>2026</span><span class=\"ds-status\">Aberto</span></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: 1.4fr 0.7fr 0.9fr; gap: 0.5rem; padding: 0.85rem 1.1rem; background: var(--metal-dark, #2a261f); color: var(--paper, #f4ead6); font-family: \"Barlow Condensed\", sans-serif; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid rgb(196 184 150 / 0.12); border-radius: 0; transition: background 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover { background: rgb(245 196 0 / 0.12); } .ds-row:focus-visible { outline: 3px solid var(--focus, #111111); outline-offset: 3px; } .ds-status { justify-self: end; }"
+    },
+    {
+      "name": "Board Row Open",
+      "kind": "custom",
+      "refersTo": "board-row-open",
+      "description": "The only yellow row: the open life-route.",
+      "html": "<a class=\"ds-row-open\" href=\"/paraguai\"><span>Paraguai</span><span>2026</span><span class=\"ds-status\">Aberto</span></a>",
+      "css": ".ds-row-open { display: grid; grid-template-columns: 1.4fr 0.7fr 0.9fr; gap: 0.5rem; padding: 0.85rem 1.1rem; background: var(--band, #f5c400); color: var(--band-ink, #111111); font-family: \"Barlow Condensed\", sans-serif; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 0; } .ds-row-open .ds-status { justify-self: end; color: var(--open, #9b1c2e); } .ds-row-open:hover { background: var(--band, #f5c400); } .ds-row-open:focus-visible { outline: 3px solid var(--focus, #111111); outline-offset: 3px; }"
+    },
+    {
+      "name": "Board Row Waiting",
+      "kind": "custom",
+      "refersTo": "board-row-wait",
+      "description": "Closed lives: metal type, not a link.",
+      "html": "<div class=\"ds-row-wait\" aria-disabled=\"true\"><span>Outros destinos</span><span>—</span><span class=\"ds-status\">Em breve</span></div>",
+      "css": ".ds-row-wait { display: grid; grid-template-columns: 1.4fr 0.7fr 0.9fr; gap: 0.5rem; padding: 0.85rem 1.1rem; background: var(--metal-dark, #2a261f); color: var(--metal, #c4b896); font-family: \"Barlow Condensed\", sans-serif; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 0; } .ds-row-wait .ds-status { justify-self: end; }"
+    },
+    {
+      "name": "Hope Panel",
+      "kind": "card",
+      "refersTo": "hope-panel",
+      "description": "Translucent paper field over dawn for reading.",
+      "html": "<section class=\"ds-hope\"><h2 class=\"ds-hope-title\">A melhor saída não é fugir.</h2><p class=\"ds-hope-body\">Recomeçar é possível, com material que cabe na mesa.</p></section>",
+      "css": ".ds-hope { background: rgb(244 234 214 / 0.92); color: var(--ink, #14110c); padding: 12vh 5vw; border-radius: 0; } .ds-hope-title { margin: 0 0 0.75rem; max-width: 16ch; font-family: \"Barlow Condensed\", sans-serif; font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.02em; } .ds-hope-body { margin: 0; max-width: 68ch; font-family: \"Overpass Variable\", Overpass, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.55; }"
+    },
+    {
+      "name": "Site Footer",
+      "kind": "custom",
+      "refersTo": "footer",
+      "description": "Ink field with paper name and metal disclaimer.",
+      "html": "<footer class=\"ds-footer\"><p>Melhor Saída para o Brasil</p><small>Conteúdo informativo. Não é assessoria jurídica.</small></footer>",
+      "css": ".ds-footer { display: grid; gap: 1rem; padding: 3rem 5vw 4rem; background: var(--ink, #14110c); color: var(--paper, #f4ead6); border-radius: 0; font-family: \"Overpass Variable\", Overpass, system-ui, sans-serif; } .ds-footer p { margin: 0; } .ds-footer small { max-width: 68ch; color: var(--metal, #c4b896); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Life-Route Board",
+    "overview": "This world is a restart route, not a travel brochure. A saturated yellow decision band sticks to the top of every page like terminal wayfinding; under it, a cream condensed headline sits on a dawn sky, then a dark metal destination board lists possible lives. The airport is a wink in the name and in the board’s grammar (columns, statuses, split-flap motion on one verb). It is never the subject: no jets, no gates, no luggage iconography.\n\nSurfaces are square, type is black-on-yellow or cream-on-dawn, and conversion is a yellow slab button — the same yellow as the band, inverted to ink on hover. Products are ruled listings with a cover, not a grid of equal cards. Paraguay is the only open row; other lives wait in metal type.",
+    "keyCharacteristics": [
+      "Sticky yellow wayfinding band with condensed uppercase identity",
+      "Monumental cream condensed headlines on photographic dawn ground",
+      "Dark metal destination board as the destination index",
+      "Square slabs; no radius vocabulary",
+      "Wine reserved for “open route” heat (status and the nav CTA hover)"
+    ],
+    "rules": [
+      {
+        "name": "The One Open Heat Rule",
+        "body": "Wine is heat for an open route (board status and nav CTA hover). It never fills a hero, a section, or a product card.",
+        "section": "colors"
+      },
+      {
+        "name": "The Yellow Is The Route Rule",
+        "body": "Saturated yellow is the decision layer: band, open row, buy. It is not a decorative accent stripe on a white travel page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Board Rule",
+        "body": "Destination names, statuses, brand, and monumental headlines live in Barlow Condensed. Overpass never headlines a destination.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Airport Display Face Rule",
+        "body": "Do not introduce a system display serif, a seven-segment numeral face, or a novelty “departures” font. The board is type + metal, not a gadget skin.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ground Then Board Rule",
+        "body": "The photograph is the sky. UI does not recede into frost or cards floating on white. Yellow and metal sit on the dawn.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the sticky yellow band as chrome on every page, with condensed uppercase identity.",
+      "Do set display headlines in cream condensed type on the dawn ground, tight leading (0.86).",
+      "Do index destinations on the metal board; only the open route gets the yellow row and wine status.",
+      "Do sell with yellow buy slabs and ruled listings, not a grid of equal product cards.",
+      "Do keep corners at 0 and type in Overpass + Barlow Condensed."
+    ],
+    "donts": [
+      "Don't build a travel hero (jet, runway, suitcase, passport collage) or make the airport the subject.",
+      "Don't give closed destinations the same visual weight as the open row.",
+      "Don't use wine as a section fill or a second yellow.",
+      "Don't round the band, board, or buy, or introduce a serif display face.",
+      "Don't turn listings into equal-height product cards."
+    ]
+  }
+}
