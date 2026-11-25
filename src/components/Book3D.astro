@@ -1,0 +1,51 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  spineTitle: string;
+  code: string;
+  href?: string;
+}
+
+const { src, alt, spineTitle, code, href } = Astro.props;
+---
+
+<div class="book3d-stage" data-book3d>
+  {
+    href ? (
+      <a class="book3d-link" href={href} aria-label={alt}>
+        <div class="book3d">
+          <div class="book3d-back" aria-hidden="true" />
+          <div class="book3d-pages" aria-hidden="true" />
+          <div class="book3d-spine" aria-hidden="true">
+            <span>{spineTitle}</span>
+          </div>
+          <div class="book3d-front">
+            <img src={src} alt={alt} width="600" height="600" loading="lazy" />
+            <span class="book3d-crease" aria-hidden="true" />
+            <span class="book3d-glare" aria-hidden="true" />
+          </div>
+        </div>
+        <span class="book3d-shadow" aria-hidden="true" />
+        <span class="book3d-tag">{code}</span>
+      </a>
+    ) : (
+      <div class="book3d-link">
+        <div class="book3d">
+          <div class="book3d-back" aria-hidden="true" />
+          <div class="book3d-pages" aria-hidden="true" />
+          <div class="book3d-spine" aria-hidden="true">
+            <span>{spineTitle}</span>
+          </div>
+          <div class="book3d-front">
+            <img src={src} alt={alt} width="600" height="600" loading="lazy" />
+            <span class="book3d-crease" aria-hidden="true" />
+            <span class="book3d-glare" aria-hidden="true" />
+          </div>
+        </div>
+        <span class="book3d-shadow" aria-hidden="true" />
+        <span class="book3d-tag">{code}</span>
+      </div>
+    )
+  }
+</div>

@@ -76,8 +76,8 @@ components:
     rounded: "{rounded.none}"
     padding: "0 1.15rem"
   nav-cta-hover:
-    backgroundColor: "{colors.open}"
-    textColor: "{colors.paper}"
+    backgroundColor: "{colors.metal-dark}"
+    textColor: "{colors.band}"
     rounded: "{rounded.none}"
   board-row:
     backgroundColor: "{colors.metal-dark}"
