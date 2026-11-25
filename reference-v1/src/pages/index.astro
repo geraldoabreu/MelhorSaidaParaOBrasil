@@ -1,0 +1,97 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, guides } from "../content";
+---
+
+<Base
+  title={`${site.name} — dá para recomeçar`}
+  description="Esperança prática para quem quer recomeçar fora do Brasil. O primeiro destino concreto: Paraguai, com guias de residência e cidades para 2026."
+>
+  <section class="hero">
+    <h1>{site.tagline}</h1>
+    <p class="hero-lead">
+      Se o chão no Brasil ficou estreito, o próximo país não é fantasia.
+      Começamos pelo <strong>Paraguai</strong> — perto, possível, e com material
+      para você decidir de olhos abertos.
+    </p>
+  </section>
+
+  <section class="board" aria-label="Destinos de recomeço">
+    <div class="board-head">
+      <span>Destino</span>
+      <span>Ano</span>
+      <span>Situação</span>
+    </div>
+    <a class="row is-open" href="/paraguai">
+      <span>Paraguai</span>
+      <span>2026</span>
+      <span class="status">Aberto</span>
+    </a>
+    <div class="row is-wait" aria-disabled="true">
+      <span>Outros destinos</span>
+      <span>—</span>
+      <span class="status">Em breve</span>
+    </div>
+  </section>
+
+  <section class="section hope">
+    <div class="split">
+      <h2>
+        A melhor saída não é fugir. É
+        <span class="flap" aria-hidden="true">
+          <span>
+            recomeçar<br />escolher<br />recomeçar
+          </span>
+        </span>
+        <span class="visually-hidden">recomeçar</span>.
+      </h2>
+      <div>
+        <p>
+          Este site existe para quem já tentou “dar um jeito” e percebeu que o
+          jeito pode ser outro país. Sem milagre, sem visto-garantido no
+          anúncio, sem desprezo por quem ainda está aqui.
+        </p>
+        <p>
+          O nome brinca com o aeroporto. O trabalho é outro: mostrar um
+          recomeço possível, com guias que cabem na mesa da cozinha — residência
+          e cidades, começando pelo Paraguai.
+        </p>
+        <p>
+          <a class="buy" href="/paraguai">Ver o Paraguai</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guias-home">
+    <h2>Dois guias. Um destino aberto.</h2>
+    <p>
+      Não é um pacote de imigração. São os dois ebooks de 2026 para quem vai
+      olhar o Paraguai de frente.
+    </p>
+    {
+      guides.map((guide) => (
+        <article class="product">
+          <img src={guide.cover} alt={guide.coverAlt} width="600" height="600" />
+          <div>
+            <h3>{guide.title}</h3>
+            <p>{guide.pitch}</p>
+            <a class="buy" href="/paraguai#guias">
+              Abrir no destino Paraguai
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</Base>
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+</style>

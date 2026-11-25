@@ -1,41 +1,149 @@
 ---
 import Base from "../layouts/Base.astro";
-import { site, guides } from "../content";
+import Book3D from "../components/Book3D.astro";
+import HeroBooks3D from "../components/HeroBooks3D.astro";
+import DestinationBoard from "../components/DestinationBoard.astro";
+import { site, guides, pillars } from "../content";
+
+const scenes = [
+  {
+    code: "01 · ASSUNÇÃO & RIO",
+    title: "Capital em movimento",
+    caption: "Infraestrutura, bairros residenciais e o que realmente muda no custo e no ritmo diário.",
+    image: "/images/asuncion-costanera.jpg",
+    alt: "Entardecer dourado na Costanera de Assunção à beira do Rio Paraguai",
+  },
+  {
+    code: "02 · HORIZONTE & CIDADES",
+    title: "Além dos clichês de fronteira",
+    caption: "Da capital ao sul e ao interior: como visitar com método antes de assinar qualquer contrato.",
+    image: "/images/editorial-restart.jpg",
+    alt: "Terraço ensolarado com ipês-rosas floridos voltado para o horizonte ao amanhecer",
+  },
+  {
+    code: "03 · ROTINA REAL",
+    title: "Decisão com os pés no chão",
+    caption: "Documentação em ordem, traduções certas e escolhas práticas para recomeçar sem improviso.",
+    image: "/images/paraguay-terrace.jpg",
+    alt: "Mesa de café da manhã em terraço arborizado no Paraguai com caderno e tereré",
+  },
+];
 ---
 
 <Base
   title={`${site.name} — dá para recomeçar`}
   description="Esperança prática para quem quer recomeçar fora do Brasil. O primeiro destino concreto: Paraguai, com guias de residência e cidades para 2026."
 >
-  <section class="hero">
-    <h1>{site.tagline}</h1>
-    <p class="hero-lead">
-      Se o chão no Brasil ficou estreito, o próximo país não é fantasia.
-      Começamos pelo <strong>Paraguai</strong> — perto, possível, e com material
-      para você decidir de olhos abertos.
-    </p>
+  <section class="hero hero--home">
+    <div class="hero-media" aria-hidden="true">
+      <div
+        class="hero-bg hero-bg--paraguay"
+        data-parallax="0.32"
+        data-parallax-mode="hero"
+      >
+      </div>
+      <div
+        class="hero-glow"
+        data-parallax="0.16"
+        data-parallax-mode="hero"
+      >
+      </div>
+      <div class="hero-scrim hero-scrim--home"></div>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <p class="hero-tag">DESTINO ABERTO · PARAGUAI 2026</p>
+        <h1>{site.tagline}</h1>
+        <p class="hero-lead">
+          Se o chão no Brasil ficou estreito, o próximo país não é fantasia.
+          Começamos pelo <strong>Paraguai</strong> — perto, possível, e com dois
+          guias práticos para você decidir de olhos abertos.
+        </p>
+        <div class="hero-actions">
+          <a class="buy buy--lg" href="/paraguai">
+            Explorar o destino Paraguai <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="ghost-link" href="#guias-home">Ver os 2 guias 2026 ↓</a>
+        </div>
+        <div class="hero-facts">
+          <div>
+            <strong>02</strong>
+            <span>Guias 2026</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Digital · Hotmart</span>
+          </div>
+          <div>
+            <strong>01</strong>
+            <span>Destino aberto agora</span>
+          </div>
+        </div>
+      </div>
+
+      <HeroBooks3D />
+    </div>
   </section>
 
-  <section class="board" aria-label="Destinos de recomeço">
-    <div class="board-head">
-      <span>Destino</span>
-      <span>Ano</span>
-      <span>Situação</span>
+  <div class="board-wrap">
+    <DestinationBoard
+      ariaLabel="Destinos de recomeço"
+      metaHeader="Ano"
+      rows={[
+        {
+          destination: "Paraguai",
+          meta: "2026",
+          status: "Aberto",
+          href: "/paraguai",
+          open: true,
+        },
+        {
+          destination: "Outros destinos",
+          meta: "—",
+          status: "Em breve",
+        },
+      ]}
+    />
+  </div>
+
+  <section class="section studio-band" aria-label="Retratos do destino">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow-code">PARAGUAI · VISÃO REAL</p>
+      <h2>O que existe do outro lado da fronteira.</h2>
+      <p>
+        Sem romantização de rede social e sem caricatura. Um país vizinho onde
+        milhares de brasileiros já constroem rotina — quando planejam com
+        critério.
+      </p>
     </div>
-    <a class="row is-open" href="/paraguai">
-      <span>Paraguai</span>
-      <span>2026</span>
-      <span class="status">Aberto</span>
-    </a>
-    <div class="row is-wait" aria-disabled="true">
-      <span>Outros destinos</span>
-      <span>—</span>
-      <span class="status">Em breve</span>
+
+    <div class="mosaic-grid" data-reveal>
+      {
+        scenes.map((scene) => (
+          <figure class="mosaic-frame" data-tilt>
+            <div class="mosaic-img-wrap">
+              <img
+                src={scene.image}
+                alt={scene.alt}
+                width="960"
+                height="540"
+                loading="lazy"
+              />
+              <span class="mosaic-code">{scene.code}</span>
+            </div>
+            <figcaption>
+              <h3>{scene.title}</h3>
+              <p>{scene.caption}</p>
+            </figcaption>
+          </figure>
+        ))
+      }
     </div>
   </section>
 
   <section class="section hope">
-    <div class="split">
+    <div class="split" data-reveal>
       <h2>
         A melhor saída não é fugir. É
         <span class="flap" aria-hidden="true">
@@ -56,28 +164,78 @@ import { site, guides } from "../content";
           recomeço possível, com guias que cabem na mesa da cozinha — residência
           e cidades, começando pelo Paraguai.
         </p>
-        <p>
-          <a class="buy" href="/paraguai">Ver o Paraguai</a>
+        <p class="cta-row">
+          <a class="buy" href="/paraguai">
+            Ver o Paraguai <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
         </p>
       </div>
     </div>
+
+    <div class="pillars" data-reveal>
+      {
+        pillars.map((pillar) => (
+          <div class="pillar">
+            <span class="pillar-code">{pillar.code}</span>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.text}</p>
+          </div>
+        ))
+      }
+    </div>
   </section>
 
-  <section class="section" id="guias-home">
-    <h2>Dois guias. Um destino aberto.</h2>
-    <p>
-      Não é um pacote de imigração. São os dois ebooks de 2026 para quem vai
-      olhar o Paraguai de frente.
-    </p>
+  <section class="interlude" aria-label="Horizonte de recomeço">
+    <div class="interlude-media" aria-hidden="true">
+      <div class="interlude-bg" data-parallax="0.42"></div>
+      <div class="interlude-scrim"></div>
+    </div>
+    <div class="interlude-content" data-reveal>
+      <p class="interlude-quote">
+        Perto o bastante para ir ver.<br />
+        Estrangeiro o bastante para ser um recomeço real.
+      </p>
+      <a class="buy buy--lg" href="/paraguai#guias">
+        Conhecer os guias do Paraguai <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section studio-band studio-band--guides" id="guias-home">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow-code">MATERIAL PRÁTICO · 2026</p>
+      <h2>Dois guias. Um destino aberto.</h2>
+      <p>
+        Não é um pacote de imigração. São os dois ebooks de 2026 para quem vai
+        olhar o Paraguai de frente — passe o cursor sobre cada volume para
+        inspecionar em 3D.
+      </p>
+    </div>
+
     {
       guides.map((guide) => (
-        <article class="product">
-          <img src={guide.cover} alt={guide.coverAlt} width="600" height="600" />
-          <div>
+        <article class="product product--dark" data-reveal>
+          <Book3D
+            src={guide.cover}
+            alt={guide.coverAlt}
+            spineTitle={guide.spineTitle}
+            code={guide.code}
+            href={`/paraguai#${guide.id}`}
+          />
+          <div class="product-body">
+            <div class="product-meta">
+              <span>{guide.code}</span>
+              <span>{guide.edition}</span>
+            </div>
             <h3>{guide.title}</h3>
-            <p>{guide.pitch}</p>
-            <a class="buy" href="/paraguai#guias">
-              Abrir no destino Paraguai
+            <p class="product-pitch">{guide.pitch}</p>
+            <ul class="guide-list">
+              {guide.covers.slice(0, 2).map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <a class="buy buy--lg" href={`/paraguai#${guide.id}`}>
+              Ver detalhes no destino Paraguai <span class="btn-arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </article>
@@ -85,13 +243,3 @@ import { site, guides } from "../content";
     }
   </section>
 </Base>
-
-<style>
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-</style>

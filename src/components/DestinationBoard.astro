@@ -1,0 +1,55 @@
+---
+interface BoardRow {
+  destination: string;
+  meta: string;
+  status: string;
+  href?: string;
+  open?: boolean;
+}
+
+interface Props {
+  ariaLabel: string;
+  metaHeader: string;
+  rows: BoardRow[];
+  compact?: boolean;
+}
+
+const { ariaLabel, metaHeader, rows, compact = false } = Astro.props;
+---
+
+<section
+  class:list={["board", { "board--compact": compact }]}
+  aria-label={ariaLabel}
+  data-board
+>
+  <div class="board-head">
+    <span>Destino</span>
+    <span>{metaHeader}</span>
+    <span class="status">Situação</span>
+  </div>
+  {
+    rows.map((row) =>
+      row.href ? (
+        <a class:list={["row", { "is-open": row.open }]} href={row.href}>
+          <span class="board-cell" data-flap-cell>
+            {row.destination}
+          </span>
+          <span class="board-cell" data-flap-cell>
+            {row.meta}
+          </span>
+          <span class="status board-cell" data-flap-cell>
+            <span class="status-dot" aria-hidden="true" />
+            {row.status}
+            <span class="row-arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      ) : (
+        <div class="row is-wait" aria-disabled="true">
+          <span class="board-cell">{row.destination}</span>
+          <span class="board-cell">{row.meta}</span>
+          <span class="status board-cell">{row.status}</span>
+        </div>
+      ),
+    )
+  }
+</section>

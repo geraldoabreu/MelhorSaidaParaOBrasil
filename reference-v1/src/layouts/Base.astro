@@ -1,0 +1,60 @@
+---
+import "@fontsource-variable/overpass";
+import "@fontsource/barlow-condensed/600.css";
+import "@fontsource/barlow-condensed/700.css";
+import "../styles/global.css";
+import { site } from "../content";
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+}
+
+const { title, description, path = "/" } = Astro.props;
+const canonical = new URL(path, Astro.site);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="theme-color" content="#f5c400" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="band">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">{site.name}</span>
+        </a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/">Início</a>
+          <a href="/paraguai">Paraguai</a>
+          <a class="nav-cta" href="/paraguai#guias">Os guias</a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>{site.name}</p>
+      <small>
+        Conteúdo informativo. Não é assessoria jurídica, contábil nem serviço
+        governamental. Os ebooks são vendidos na Hotmart; os botões de compra
+        recebem o link oficial assim que a oferta estiver no ar.
+      </small>
+    </footer>
+  </body>
+</html>

@@ -13,6 +13,9 @@ interface Props {
 
 const { title, description, path = "/" } = Astro.props;
 const canonical = new URL(path, Astro.site);
+const ogImage = new URL("/images/og-cover.jpg", Astro.site);
+const isHome = path === "/";
+const isParaguai = path.startsWith("/paraguai");
 ---
 
 <!doctype html>
@@ -23,11 +26,17 @@ const canonical = new URL(path, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#f5c400" />
   </head>
   <body>
@@ -39,9 +48,11 @@ const canonical = new URL(path, Astro.site);
           <span class="brand-name">{site.name}</span>
         </a>
         <nav class="nav" aria-label="Principal">
-          <a href="/">Início</a>
-          <a href="/paraguai">Paraguai</a>
-          <a class="nav-cta" href="/paraguai#guias">Os guias</a>
+          <a href="/" aria-current={isHome ? "page" : undefined}>Início</a>
+          <a href="/paraguai" aria-current={isParaguai ? "page" : undefined}>
+            Paraguai
+          </a>
+          <a class="nav-cta" href="/paraguai#guias">Os guias →</a>
         </nav>
       </div>
     </header>
@@ -49,12 +60,24 @@ const canonical = new URL(path, Astro.site);
       <slot />
     </main>
     <footer class="site-footer">
-      <p>{site.name}</p>
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">{site.name}</p>
+          <p class="footer-domain">{site.domain}</p>
+        </div>
+        <nav class="footer-nav" aria-label="Rodapé">
+          <a href="/">Início</a>
+          <a href="/paraguai">Paraguai</a>
+          <a href="/paraguai#residencia">Residência 2026</a>
+          <a href="/paraguai#cidades">Cidades 2026</a>
+        </nav>
+      </div>
       <small>
         Conteúdo informativo. Não é assessoria jurídica, contábil nem serviço
         governamental. Os ebooks são vendidos na Hotmart; os botões de compra
         recebem o link oficial assim que a oferta estiver no ar.
       </small>
     </footer>
+    <script src="../scripts/motion.ts"></script>
   </body>
 </html>

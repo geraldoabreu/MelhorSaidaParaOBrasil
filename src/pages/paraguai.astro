@@ -1,6 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
-import { site, guides } from "../content";
+import Book3D from "../components/Book3D.astro";
+import HeroBooks3D from "../components/HeroBooks3D.astro";
+import DestinationBoard from "../components/DestinationBoard.astro";
+import { site, guides, paraguayFaq } from "../content";
 ---
 
 <Base
@@ -8,69 +11,157 @@ import { site, guides } from "../content";
   description="Landing dos ebooks Residência Paraguaia para Brasileiros 2026 e Guia de Cidades do Paraguai 2026. Material para recomeçar no Paraguai com os pés no chão."
   path="/paraguai"
 >
-  <section class="hero">
-    <h1>Paraguai</h1>
-    <p class="hero-lead">
-      O primeiro destino desta casa. Perto o bastante para ir ver. Estrangeiro o
-      bastante para ser de fato um recomeço. Os guias abaixo são o material —
-      a venda acontece na Hotmart.
-    </p>
-  </section>
-
-  <section class="board" aria-label="Situação do destino">
-    <div class="board-head">
-      <span>Destino</span>
-      <span>Material</span>
-      <span>Situação</span>
+  <section class="hero hero--paraguay">
+    <div class="hero-media" aria-hidden="true">
+      <div
+        class="hero-bg hero-bg--costanera"
+        data-parallax="0.3"
+        data-parallax-mode="hero"
+      >
+      </div>
+      <div class="hero-scrim hero-scrim--paraguay"></div>
     </div>
-    <a class="row is-open" href="#guias">
-      <span>Paraguai</span>
-      <span>2 guias</span>
-      <span class="status">Aberto</span>
-    </a>
+
+    <div class="hero-grid hero-grid--compact">
+      <div class="hero-inner">
+        <p class="hero-tag">ROTA 01 · EDIÇÃO 2026</p>
+        <h1>Paraguai</h1>
+        <p class="hero-lead">
+          O primeiro destino desta casa. Perto o bastante para ir ver.
+          Estrangeiro o bastante para ser de fato um recomeço. Os dois guias
+          2026 abaixo são o material — a venda acontece na Hotmart.
+        </p>
+        <div class="hero-actions">
+          <a class="buy buy--lg" href="#guias">
+            Ir direto para os guias 2026 <span class="btn-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="ghost-link" href="#escolher">Qual guia escolher?</a>
+        </div>
+      </div>
+
+      <HeroBooks3D />
+    </div>
   </section>
 
-  <section class="section hope" id="guias">
-    <h2>O que você leva na mala de decisão</h2>
-    <p>
-      Dois ebooks, um para a papelada, outro para o chão onde você vai acordar.
-      Links da Hotmart entram aqui quando a oferta estiver publicada.
-    </p>
+  <div class="board-wrap">
+    <DestinationBoard
+      ariaLabel="Situação do destino Paraguai"
+      metaHeader="Material"
+      compact={true}
+      rows={[
+        {
+          destination: "Paraguai",
+          meta: "2 guias · 2026",
+          status: "Aberto",
+          href: "#guias",
+          open: true,
+        },
+      ]}
+    />
+  </div>
+
+  <section class="section hope" id="escolher">
+    <div class="decision-strip" data-reveal>
+      <div class="decision-head">
+        <h2>Qual guia faz sentido agora?</h2>
+        <p>
+          Dois ebooks complementares, sem sobreposição: um para a papelada,
+          outro para o chão onde você vai acordar.
+        </p>
+      </div>
+      <div class="decision-grid">
+        {
+          guides.map((guide) => (
+            <a class="decision-cell" href={`#${guide.id}`}>
+              <span class="decision-code">{guide.code}</span>
+              <strong>{guide.shortTitle}</strong>
+              <p>{guide.idealFor}</p>
+              <span class="decision-go">Ir para este guia ↓</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section studio-band studio-band--guides" id="guias">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow-code">OFERTA DIRETA · HOTMART</p>
+      <h2>O que você leva na mala de decisão.</h2>
+      <p>
+        Passe o cursor sobre os volumes para explorar em 3D. Links oficiais da
+        Hotmart entram nos botões assim que a oferta estiver no ar.
+      </p>
+    </div>
+
     {
       guides.map((guide) => (
-        <article class="product" id={guide.id}>
-          <img src={guide.cover} alt={guide.coverAlt} width="600" height="600" />
-          <div>
+        <article class="product product--dark product--sales" id={guide.id} data-reveal>
+          <Book3D
+            src={guide.cover}
+            alt={guide.coverAlt}
+            spineTitle={guide.spineTitle}
+            code={guide.code}
+          />
+          <div class="product-body">
+            <div class="product-meta">
+              <span>{guide.code}</span>
+              <span>{guide.edition}</span>
+              <span class="meta-open-pill">{guide.status}</span>
+            </div>
             <h3>{guide.title}</h3>
-            <p>{guide.pitch}</p>
-            <ul>
+            <p class="product-pitch">{guide.pitch}</p>
+            <ul class="guide-list">
               {guide.covers.map((item) => (
                 <li>{item}</li>
               ))}
             </ul>
-            <a class="buy" href={guide.href} data-hotmart={guide.id}>
-              Quero este guia
-            </a>
-            <p class="note">
-              Compra pela Hotmart. O link oficial entra neste botão assim que
-              a oferta estiver no ar.
-            </p>
+            <div class="buy-wrap">
+              <a class="buy buy--lg" href={guide.href} data-hotmart={guide.id}>
+                Quero este guia <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+              <p class="note">
+                Compra segura pela Hotmart. O link oficial entra neste botão
+                assim que a oferta estiver publicada.
+              </p>
+            </div>
           </div>
         </article>
       ))
     }
   </section>
 
-  <section class="section">
-    <h2>O que estes guias não são</h2>
-    <p>
-      Não substituem advogado, contador nem o que o governo paraguaio publicar
-      no dia do seu protocolo. São um mapa de quem já organizou o caminho para
-      brasileiro em 2026 — para você chegar na conversa certa sem pagar de
-      novato em tudo.
-    </p>
-    <p>
-      <a class="buy" href="#guias">Ir para os guias</a>
-    </p>
+  <section class="section faq-section">
+    <div class="split" data-reveal>
+      <div>
+        <h2>O que estes guias não são</h2>
+        <p>
+          Não substituem advogado, contador nem o que o governo paraguaio
+          publicar no dia do seu protocolo. São um mapa de quem já organizou o
+          caminho para brasileiro em 2026 — para você chegar na conversa certa
+          sem pagar de novato em tudo.
+        </p>
+        <p class="cta-row">
+          <a class="buy" href="#guias">
+            Voltar para os guias <span class="btn-arrow" aria-hidden="true">↑</span>
+          </a>
+        </p>
+      </div>
+
+      <div class="faq-list" aria-label="Perguntas frequentes">
+        <p class="faq-heading">Dúvidas diretas</p>
+        {
+          paraguayFaq.map((item) => (
+            <details class="faq-item">
+              <summary>
+                <span>{item.q}</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <p>{item.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
   </section>
 </Base>

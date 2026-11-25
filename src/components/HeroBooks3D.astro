@@ -1,0 +1,67 @@
+---
+import { guides } from "../content";
+
+const [residencia, cidades] = guides;
+---
+
+<div class="hero-stage" data-hero-stage>
+  <div class="hero-stage-grid" aria-hidden="true"></div>
+  <div class="hero-stage-halo" aria-hidden="true"></div>
+
+  <div class="hero-stage-scene" data-hero-scene>
+    <a
+      class="hero-book hero-book--back"
+      href={`/paraguai#${cidades.id}`}
+      aria-label={cidades.coverAlt}
+      data-depth="14"
+    >
+      <div class="book3d book3d--hero-back">
+        <div class="book3d-back" aria-hidden="true"></div>
+        <div class="book3d-pages" aria-hidden="true"></div>
+        <div class="book3d-spine" aria-hidden="true">
+          <span>{cidades.spineTitle}</span>
+        </div>
+        <div class="book3d-front">
+          <img
+            src={cidades.cover}
+            alt={cidades.coverAlt}
+            width="600"
+            height="600"
+          />
+          <span class="book3d-crease" aria-hidden="true"></span>
+          <span class="book3d-glare" aria-hidden="true"></span>
+        </div>
+      </div>
+    </a>
+
+    <a
+      class="hero-book hero-book--front"
+      href={`/paraguai#${residencia.id}`}
+      aria-label={residencia.coverAlt}
+      data-depth="28"
+    >
+      <div class="book3d book3d--hero-front">
+        <div class="book3d-back" aria-hidden="true"></div>
+        <div class="book3d-pages" aria-hidden="true"></div>
+        <div class="book3d-spine" aria-hidden="true">
+          <span>{residencia.spineTitle}</span>
+        </div>
+        <div class="book3d-front">
+          <img
+            src={residencia.cover}
+            alt={residencia.coverAlt}
+            width="600"
+            height="600"
+          />
+          <span class="book3d-crease" aria-hidden="true"></span>
+          <span class="book3d-glare" aria-hidden="true"></span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="hero-stage-caption" data-depth="8">
+    <span class="stage-pill">2 VOLUMES · 2026</span>
+    <span>Residência + Cidades do Paraguai</span>
+  </div>
+</div>
