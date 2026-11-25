@@ -1,0 +1,76 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, guides } from "../content";
+---
+
+<Base
+  title={`Paraguai — ${site.name}`}
+  description="Landing dos ebooks Residência Paraguaia para Brasileiros 2026 e Guia de Cidades do Paraguai 2026. Material para recomeçar no Paraguai com os pés no chão."
+  path="/paraguai"
+>
+  <section class="hero">
+    <h1>Paraguai</h1>
+    <p class="hero-lead">
+      O primeiro destino desta casa. Perto o bastante para ir ver. Estrangeiro o
+      bastante para ser de fato um recomeço. Os guias abaixo são o material —
+      a venda acontece na Hotmart.
+    </p>
+  </section>
+
+  <section class="board" aria-label="Situação do destino">
+    <div class="board-head">
+      <span>Destino</span>
+      <span>Material</span>
+      <span>Situação</span>
+    </div>
+    <a class="row is-open" href="#guias">
+      <span>Paraguai</span>
+      <span>2 guias</span>
+      <span class="status">Aberto</span>
+    </a>
+  </section>
+
+  <section class="section hope" id="guias">
+    <h2>O que você leva na mala de decisão</h2>
+    <p>
+      Dois ebooks, um para a papelada, outro para o chão onde você vai acordar.
+      Links da Hotmart entram aqui quando a oferta estiver publicada.
+    </p>
+    {
+      guides.map((guide) => (
+        <article class="product" id={guide.id}>
+          <img src={guide.cover} alt={guide.coverAlt} width="600" height="600" />
+          <div>
+            <h3>{guide.title}</h3>
+            <p>{guide.pitch}</p>
+            <ul>
+              {guide.covers.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <a class="buy" href={guide.href} data-hotmart={guide.id}>
+              Quero este guia
+            </a>
+            <p class="note">
+              Botão aguardando o link oficial da Hotmart. Quando você colar a
+              URL em <code>src/content.ts</code>, este CTA passa a vender.
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class="section">
+    <h2>O que estes guias não são</h2>
+    <p>
+      Não substituem advogado, contador nem o que o governo paraguaio publicar
+      no dia do seu protocolo. São um mapa de quem já organizou o caminho para
+      brasileiro em 2026 — para você chegar na conversa certa sem pagar de
+      novato em tudo.
+    </p>
+    <p>
+      <a class="buy" href="#guias">Ir para os guias</a>
+    </p>
+  </section>
+</Base>

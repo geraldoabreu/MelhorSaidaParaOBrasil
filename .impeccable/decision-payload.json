@@ -1,0 +1,147 @@
+{
+  "title": "Escolha o mundo visual",
+  "question": "O dado caiu em Ñandutí — a renda paraguaia como página. Fica, troca por um desafiante, ou re-rola.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Ñandutí",
+      "kicker": "THE ROLL",
+      "lineage": "Renda ñandutí de Itauguá: teia de aranha em linha, aro de madeira, vazios que são o desenho",
+      "thesis": "A saída do Brasil é uma teia que se constrói ponto a ponto: cada anel da renda é um passo até o Paraguai, e o furo no centro é o céu do aeroporto.",
+      "palette": ["#1a120c", "#f4ead6", "#c4a574", "#9b1c2e"],
+      "materials": ["linha de algodão tensionada", "aro de cedro", "luz de abajur sobre mesa"],
+      "viewport": "Home como um único aro de ñandutí ocupando o viewport: o nome no anel externo, o slogan no próximo, o furo central mostrando o próximo voo para Assunção, CTA ‘Embarcar no Paraguai’ preso no nó sul.",
+      "risk": "Pode parecer artesanato de souvenir se a renda for ilustração e o site um template por cima.",
+      "raised": [
+        {
+          "from": "challenger-clay",
+          "raise": "Cada curso da renda é um anel construtivo, não um ornamento: o visitante sobe pelos anéis (home → destino → guias) como a torre sobe por espiras."
+        },
+        {
+          "from": "challenger-cloud",
+          "raise": "Os vazios da renda não são fundo decorativo: são cortes que revelam o destino (céu, pista, Assunção) como a pedreira de nuvem revela o azul."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.webp",
+      "riskDetail": "Brasileiro identifica o aeroporto; poucos reconhecem ñandutí pelo nome. A teia precisa funcionar como mapa, não como folclore."
+    },
+    {
+      "id": "model-pick",
+      "label": "Painel de partidas",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Split-flap de GRU/CGH: linhas de destino, status, portão",
+      "thesis": "A home é o painel: o destino que falta no Brasil aparece como o único voo em embarque — Paraguai.",
+      "palette": ["#0d0d0b", "#c4b896", "#e23c22", "#f2efe6"],
+      "materials": ["aletas metálicas", "luz de saguão", "tinta de status"],
+      "viewport": "Quadro de partidas em tela cheia; uma linha ‘ASSUNÇÃO — EMBARQUE’ ampliada; CTA troca o status da linha.",
+      "risk": "É o destino mais familiar desta categoria: o site vira ‘mais um site de aeroporto’ se o humor não carregar o produto.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-wayfinding",
+      "label": "Faixa amarela de terminal",
+      "verdict": "wins",
+      "lineage": "Sinalização Schiphol: painéis amarelos saturados, pictogramas brancos, setas de borda",
+      "thesis": "Quem quer sair precisa de uma única decisão por faixa: Paraguai à esquerda, guias à frente, embarque agora.",
+      "palette": ["#f5c400", "#111111", "#ffffff", "#1c1c1c"],
+      "materials": ["alumínio esmaltado", "pictograma recortado", "saguão iluminado"],
+      "viewport": "Faixa amarela monumental no alto com ‘Paraguai — 12 min’; o CTA é o número do portão; abaixo o corredor revela os dois ebooks como destinos seguintes.",
+      "case": "Ganha identificação (todo brasileiro leu um aeroporto) e clareza (a ação é o próximo portão). A Ñandutí perde nos dois eixos para este sistema.",
+      "risk": "Amarelo de terminal vira template de ‘startup de viagem’ se as faixas não forem a estrutura da página.",
+      "comp": ".impeccable/mocks/decision/challenger-wayfinding.webp",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding.webp"
+    },
+    {
+      "id": "challenger-seven-segment",
+      "label": "Totem de cotação",
+      "verdict": "competitive",
+      "lineage": "Display de sete segmentos: relógio, posto, placar",
+      "thesis": "A conversão é um totem de câmbio: PYG e destino acendem; o CTA troca os segmentos.",
+      "palette": ["#0a0a0a", "#ff3b1f", "#3a1010", "#c8c2b4"],
+      "materials": ["LED vermelho", "segmento fantasma", "caixa preta fosca"],
+      "viewport": "Quatro dígitos monumentais ‘SAIR’; abaixo PYG como cotação; botão ‘Comprar guias’ como tecla SET.",
+      "case": "Segura identificação pelo dinheiro da mudança; perde clareza — cotação não explica os ebooks.",
+      "risk": "Vira estética de cassino se o vermelho LED cobrir o texto dos guias.",
+      "comp": ".impeccable/mocks/decision/challenger-seven-segment.webp",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock.webp"
+    },
+    {
+      "id": "challenger-risograph",
+      "label": "Zine Riso de saída",
+      "verdict": "competitive",
+      "lineage": "Impressão risograph: duas tintas spot, papel denteado, fora de registro",
+      "thesis": "Os guias são o impresso: a landing é uma edição Riso cujo CTA é o pedido do próximo caderno.",
+      "palette": ["#efe6d4", "#ff2d7b", "#1e3a8a", "#f5c400"],
+      "materials": ["papel tosco", "tinta spot", "halftone"],
+      "viewport": "Folha inteira com título em tinta única; os dois ebooks como blocos de tinta sobrepostos; hover desalinha as camadas.",
+      "case": "Segura clareza editorial (são ebooks); perde identificação com quem está no aeroporto, não na gráfica.",
+      "risk": "Riso já é o uniforme de projeto cultural brasileiro.",
+      "comp": ".impeccable/mocks/decision/challenger-risograph.webp",
+      "hero": "https://impeccable.style/worlds/cards/risograph-web-system-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/risograph-web-system.webp"
+    },
+    {
+      "id": "challenger-clay",
+      "label": "Torre de barro em espiras",
+      "verdict": "declined",
+      "lineage": "Torre de argila enrolada à mão",
+      "thesis": "A mudança como construção lenta, espira por espira.",
+      "palette": ["#c45c2a", "#5c3317", "#f3e6d4", "#2b1c14"],
+      "materials": ["argila crua", "costura de barbotina"],
+      "viewport": "Torre ocupando a coluna; cada espira um passo da residência.",
+      "case": "Perde identificação e clareza: emigrar não é cerâmica.",
+      "kept": "Cursos empilhados como registro do tempo — doado à Ñandutí como anéis construtivos.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-coiled-earth-tower-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-coiled-earth-tower.webp",
+      "risk": "O visitante não sabe o que comprar."
+    },
+    {
+      "id": "challenger-cloud",
+      "label": "Pedreira de nuvem",
+      "verdict": "declined",
+      "lineage": "Pedreira onírica que corta o tempo",
+      "thesis": "Cortar o céu em blocos e montar a saída.",
+      "palette": ["#e8eef5", "#4a90c8", "#6b7280", "#cfd8e3"],
+      "materials": ["cúmulos cortados", "serra prateada"],
+      "viewport": "Bloco de nuvem com o vazio azul sendo o Paraguai.",
+      "case": "Perde os dois eixos: o surreal esconde a oferta.",
+      "kept": "Vazios como corte que revela destino — doado à renda.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-cloud-quarry-hero.webp",
+      "risk": "Lindo e ilegível para quem veio comprar um guia."
+    },
+    {
+      "id": "challenger-livery",
+      "label": "Garagem de endurance",
+      "verdict": "declined",
+      "lineage": "Livery Gulf/Martini",
+      "thesis": "Faixas de velocidade como identidade da saída.",
+      "palette": ["#7ba7c9", "#f0a202", "#111111", "#ffffff"],
+      "materials": ["tinta de carroceria", "redondo de número"],
+      "viewport": "Faixa Gulf atravessando a home; número no roundel é o CTA.",
+      "case": "Perde identificação (corrida ≠ imigração) e clareza.",
+      "kept": "Identidade lida pela faixa antes da palavra — a renda precisa ser reconhecível sem o rótulo.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-endurance-livery-garage-hero.webp",
+      "risk": "Vira merch de corrida."
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "O padrão da categoria",
+    "thesis": "Landing de imigração impecável: foto de destino, prova, dois produtos, CTA.",
+    "palette": ["#ffffff", "#0f172a", "#1d4ed8", "#e2e8f0"],
+    "materials": ["foto stock", "grid limpo", "cards iguais"],
+    "viewport": "Hero com headline, subcopy, botão; abaixo dois cards de ebook.",
+    "risk": "Indistinguível de qualquer funil de infoproduto.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}
