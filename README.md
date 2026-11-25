@@ -2,6 +2,8 @@
 
 Site editorial e de conversão para quem quer recomeçar fora do Brasil. O primeiro destino tratado é o **Paraguai**, com landing em `/paraguai` para os ebooks vendidos na Hotmart.
 
+**Handoff para outra IA:** leia [`HANDOFF.md`](./HANDOFF.md) antes de `PRODUCT.md` e `DESIGN.md`.
+
 ## Desenvolvimento
 
 ```bash
