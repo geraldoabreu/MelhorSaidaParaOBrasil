@@ -11,6 +11,6 @@
   "dependencies": {
     "@fontsource-variable/overpass": "^5.2.8",
     "@fontsource/barlow-condensed": "^5.2.6",
-    "astro": "^5.16.0"
+    "astro": "^7.4.13"
   }
 }
